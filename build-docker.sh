@@ -33,9 +33,16 @@ docker rmi ${APP_NAME_OLD}:${server_version}
 echo "---------- [Deploy Step - 8] : Run New Docker Container"
 docker run -d -p ${PORT}:${PORT} \
     -e VIRTUAL_HOST=www.todolist.o-r.kr,todolist.o-r.kr \
+    -e VIRTUAL_PORT=10900 \
+    -e HTTPS_METHOD=noredirect \
+    -v /path/to/certificate.crt:./certificate.crt \
+    -v /path/to/ca_bundle.crt:./ca_bundle.crt \
+    -v /path/to/private.key:./private.key \
+    --link ${APP_NAME} \
     --restart unless-stopped \
     --name ${APP_NAME} \
     ${APP_NAME}:${server_version}
+
 
 # docker logs show
 docker logs -f ${APP_NAME}
