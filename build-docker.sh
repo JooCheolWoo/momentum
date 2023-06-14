@@ -41,7 +41,7 @@ docker run -d -p ${PORT}:${PORT} \
     -e VIRTUAL_HOST=www.todolist.o-r.kr,todolist.o-r.kr \
     -e VIRTUAL_PORT=10900 \
     -e HTTPS_METHOD=noredirect \
-    -v /etc/nginx/certs:/etc/nginx/certs
+    -v /etc/nginx/certs:/etc/nginx/certs \
     --restart unless-stopped \
     --link ${APP_NAME}:app \
     --name ${APP_NAME} \
