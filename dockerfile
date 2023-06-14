@@ -11,4 +11,4 @@ COPY img ./img
 COPY js ./js
 
 # 포트 노출
-EXPOSE 10900
+EXPOSE 80
