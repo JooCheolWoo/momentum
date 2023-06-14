@@ -34,6 +34,9 @@ echo "---------- [Deploy Step - 8] : Run New Docker Container"
 docker run -d -p ${PORT}:${PORT} \
     -e VIRTUAL_HOST=www.todolist.o-r.kr,todolist.o-r.kr \
     -e VIRTUAL_PORT=10900 \
+    -e LETSENCRYPT_HOST=www.todolist.o-r.kr,todolist.o-r.kr \
+    -e LETSENCRYPT_EMAIL=tkfkdal@naver.com \
+    --network nginx-proxy \
     --restart unless-stopped \
     --name ${APP_NAME} \
     ${APP_NAME}:${server_version}
