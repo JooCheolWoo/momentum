@@ -1,8 +1,14 @@
-# 베이스 이미지로 nginx를 사용합니다.
-FROM nginx
+# 베이스 이미지 선택
+FROM nginx:latest
 
-# HTML 파일을 컨테이너 내부의 특정 디렉토리로 복사합니다.
-COPY html.html ../index.html
+# 작업 디렉토리 설정
+WORKDIR /usr/share/nginx/html
 
-# 80번 포트로 들어오는 요청을 처리할 것임을 Docker에 알려줍니다.
+# 소스 코드 복사
+COPY index.html .
+COPY css ./css
+COPY img ./img
+COPY js ./js
+
+# 포트 노출
 EXPOSE 10900
