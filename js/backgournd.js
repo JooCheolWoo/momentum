@@ -75,4 +75,4 @@ window.addEventListener('resize', () => {
 });
 
 getBackground();
-setInterval(getBackground, 60000);
+setInterval(getBackground, 1000 * 60 * 10);
