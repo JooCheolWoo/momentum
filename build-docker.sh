@@ -33,6 +33,7 @@ docker rmi ${APP_NAME_OLD}:${server_version}
 echo "---------- [Deploy Step - 8] : Run New Docker Container"
 docker run -d -p ${PORT}:${PORT} \
     -e VIRTUAL_HOST=www.todolist.o-r.kr,todolist.o-r.kr \
+    -e VIRTUAL_PORT=10900
     -e LETSENCRYPT_HOST=www.todolist.o-r.kr,todolist.o-r.kr \
     --restart unless-stopped \
     --name ${APP_NAME} \
