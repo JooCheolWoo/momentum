@@ -31,11 +31,11 @@ echo "---------- [Deploy Step - 7] : Remove Old Docker Image"
 docker rmi ${APP_NAME_OLD}:${server_version}
 # 8. Run new docker container
 echo "---------- [Deploy Step - 8] : Run New Docker Container"
- docker run -d -p ${PORT}:${PORT} \
-     -e VIRTUAL_HOST=www.todolist.o-r.kr,todolist.o-r.kr \
-     --restart unless-stopped \
-     --name ${APP_NAME} \
-     ${APP_NAME}:${server_version}
+docker run -d -p ${PORT}:${PORT} \
+    -e VIRTUAL_HOST=www.todolist.o-r.kr,todolist.o-r.kr \
+    --restart unless-stopped \
+    --name ${APP_NAME} \
+    ${APP_NAME}:${server_version}
 
 
 # docker logs show
