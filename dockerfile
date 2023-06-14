@@ -9,6 +9,9 @@ COPY index.html .
 COPY css ./css
 COPY img ./img
 COPY js ./js
+COPY ca_bundle.crt /etc/nginx/ssl/
+COPY certificate.crt /etc/nginx/ssl/
+COPY private.key /etc/nginx/ssl/private/
 
 # 포트 노출
 EXPOSE 10900
