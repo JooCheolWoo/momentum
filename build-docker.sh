@@ -36,25 +36,13 @@ docker cp private.key nginx-proxy:/etc/ssl/private.key
 
 # 8. Run new docker container
 echo "---------- [Deploy Step - 8] : Run New Docker Container"
-# docker run -d -p ${PORT}:${PORT} \
-#     -e VIRTUAL_HOST=www.todolist.o-r.kr,todolist.o-r.kr \
-#     -e VIRTUAL_PORT=10900 \
-#     -e HTTPS_METHOD=noredirect \
-#     -v /etc/nginx/certs:/etc/nginx/certs \
-#     --restart unless-stopped \
-#     --link ${APP_NAME}:app \
-#     --name ${APP_NAME} \
-#     ${APP_NAME}:${server_version}
-
-docker run -d -p ${PORT}:${PORT} \
-    -e VIRTUAL_HOST=todolist.o-r.kr,www.todolist.o-r.kr \
-    -e VIRTUAL_PORT=10900 \
-    -e HTTPS_METHOD=noredirect \
-    -v /path/to/certificate.crt:/etc/ssl/certificate.crt \
-    -v /path/to/private.key:/etc/ssl/private.key \
-    --link nginx-proxy \
-    --name ${APP_NAME} \
-    ${APP_NAME}:${server_version}
+ docker run -d -p ${PORT}:${PORT} \
+     -e VIRTUAL_HOST=www.todolist.o-r.kr,todolist.o-r.kr \
+     -e VIRTUAL_PORT=10900 \
+     --restart unless-stopped \
+     --link ${APP_NAME}:app \
+     --name ${APP_NAME} \
+     ${APP_NAME}:${server_version}
 
 
 # docker logs show
