@@ -43,7 +43,7 @@ docker run -d -p ${PORT}:${PORT} \
     -e HTTPS_METHOD=noredirect \
     -v /etc/nginx/certs:/etc/nginx/certs
     --restart unless-stopped \
-    --link ${APP_NAME}:app
+    --link ${APP_NAME}:app \
     --name ${APP_NAME} \
     ${APP_NAME}:${server_version}
 
