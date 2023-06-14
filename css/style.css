@@ -7,7 +7,6 @@ body {
     justify-content: center;
     align-items: center;
     font-size: calc(10px + 2vmin);
-    color: white;
     text-align: center;
     background-size: cover;
     background-position: center center;
@@ -23,8 +22,8 @@ body {
     top: 20px;
     right: 20px;
     font-size: 20px;
-    color: rgb(230, 230, 230);
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
 
     > span:first-child:before {
         content: attr(data-icon);
@@ -37,9 +36,9 @@ body {
     #clock {
         font-size: 8vh; /* Clock 크기 조절 */
         margin: 0;
-        color: rgb(230, 230, 230);
+        color: rgb(255, 255, 255);
         text-align: center;
-        text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+        text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
     }
   
 
@@ -61,10 +60,11 @@ body {
     }
      
     #greeting {
-        font-family: 'Single Day', cursive;
-        color: rgb(230, 230, 230);
-        text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
-        font-size: 6vh;
+      margin : 10px;
+      font-family: 'Single Day', cursive;
+      color: rgb(255, 255, 255);
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+      font-size: 3.5vh;
     }  
   }
   
@@ -118,11 +118,11 @@ body {
   }
 
   #quote {
-    color: rgb(230, 230, 230);
+    color: rgb(255, 255, 255);
     position: absolute;
     bottom: 10px;
     font-size: 2vh;
-    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
   }
   
   
