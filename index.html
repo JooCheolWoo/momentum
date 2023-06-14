@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbit&family=Single+Day&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Momentum</title>
+</head>
+<body>
+    <div class="backgournd"></div>
+    <h2 id="clock">00:00:00</h2>
+    <div class="userContainer">
+        <form id="login-form" class="hidden">
+            <input required maxlength="15" value="" type="text" placeholder="Type your name here"/>
+            <button class="hidden">Log In</button>
+        </form>
+        <h2 id="greeting" class="hidden"></h2>
+    </div>
+    <form id="todo-form">
+        <input type="text" placeholder="Write a To Do and Press Enter" required>
+    </form>
+    <ul id="todo-list"></ul>
+    <div id="quote">
+        <span></span>
+    </div>
+    <div id="weather">
+        <span></span>
+        <span></span>
+    </div>
+    <script src='js/greetings.js'></script>
+    <script src='js/clock.js'></script>
+    <script src='js/quotes.js'></script>
+    <script src="js/backgournd.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+</body>
+</html>

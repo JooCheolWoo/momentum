@@ -1,0 +1,129 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center center;
+    font-family: 'Orbit', sans-serif;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #weather {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    color: rgb(230, 230, 230);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+
+    > span:first-child:before {
+        content: attr(data-icon);
+        font-family: 'Weather Icons';
+        padding-right: 5px;
+      }
+  }
+  
+
+    #clock {
+        font-size: 8vh; /* Clock 크기 조절 */
+        margin: 0;
+        color: rgb(230, 230, 230);
+        text-align: center;
+        text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+    }
+  
+
+  .userContainer {
+    #login-form input {
+        font-family: 'Single Day', cursive;
+        width:330px;
+        height: 5vh;
+        font-size: 22px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+
+    #login-form input::placeholder {
+        color: #2e2e2e; /* Placeholder의 글자색을 변경 */
+        text-align: center;
+    }
+     
+    #greeting {
+        font-family: 'Single Day', cursive;
+        color: rgb(230, 230, 230);
+        text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+        font-size: 6vh;
+    }  
+  }
+  
+  
+  #todo-form input {
+    font-family: 'Single Day', cursive;
+    width:330px;
+    height: 5vh;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+
+  }
+
+  #todo-form input::placeholder {
+    color: #2e2e2e; /* Placeholder의 글자색을 변경 */
+    text-align: center;
+    }
+
+  #todo-list {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 25px;
+    height: 55vh;
+    width: 400px;
+    overflow-y: scroll;
+    font-size: 20px;
+    background-color: rgba(150, 150, 150, 0.3);
+    border-radius: 20px;
+    border: 1px solid rgba(83, 138, 240, 0.2);
+
+    > li {
+        display: flex;
+        list-style-type: none;
+        padding: 10px;
+        border: 1px solid rgba(83, 138, 240, 0.2);
+
+        > button {
+            margin-right: 10px;
+            background-color: rgba(255, 255, 255, 0);
+            border: none;
+        }
+
+        > button:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+    }
+  }
+
+  #quote {
+    color: rgb(230, 230, 230);
+    position: absolute;
+    bottom: 10px;
+    font-size: 2vh;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  
