@@ -6,7 +6,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: calc(10px + 2vmin);
     text-align: center;
     background-size: cover;
     background-position: center center;
@@ -19,9 +18,9 @@ body {
   
   #weather {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 20px;
+    top: 1vh;
+    right: 1vw;
+    font-size: 2vh;
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
 
