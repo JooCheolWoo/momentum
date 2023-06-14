@@ -35,7 +35,6 @@ echo "---------- [Deploy Step - 8] : Run New Docker Container"
      -e VIRTUAL_HOST=www.todolist.o-r.kr,todolist.o-r.kr \
      -e VIRTUAL_PORT=10900 \
      --restart unless-stopped \
-     --link ${APP_NAME}:app \
      --name ${APP_NAME} \
      ${APP_NAME}:${server_version}
 
