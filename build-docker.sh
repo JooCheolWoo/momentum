@@ -38,7 +38,6 @@ docker run -d -p ${PORT}:${PORT} \
     -v /path/to/certificate.crt:./certificate.crt \
     -v /path/to/ca_bundle.crt:./ca_bundle.crt \
     -v /path/to/private.key:./private.key \
-    --link ${APP_NAME} \
     --restart unless-stopped \
     --name ${APP_NAME} \
     ${APP_NAME}:${server_version}
