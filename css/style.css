@@ -129,7 +129,7 @@ body {
 
   #quote {
     color: rgb(255, 255, 255);
-    position: absolute;
+    position: relative;
     bottom: 0.5vh;
     font-size: 2vh;
     text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
