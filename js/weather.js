@@ -17,7 +17,7 @@ function onGeoSuccess(position) {
             const city = document.querySelector("#weather span:last-child");
             city.innerText = data.name;
             weather.dataset.icon = mapWeatherIcon(data.weather[0].main);
-            weather.innerText = `${data.weather[0].main} \n ${data.main.temp}℃`;
+            weather.innerText = `${data.weather[0].main} ${data.main.temp}℃`;
           });
 }
 
