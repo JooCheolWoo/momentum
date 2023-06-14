@@ -29,16 +29,21 @@ docker rm ${APP_NAME_OLD}
 # 7. Remove the old docker image
 echo "---------- [Deploy Step - 7] : Remove Old Docker Image"
 docker rmi ${APP_NAME_OLD}:${server_version}
+
+#ssl
+docker cp ca_bundle.crt nginx-proxy:/etc/nginx/certs/ca_bundle.crt
+docker cp certificate.crt nginx-proxy:/etc/nginx/certs/certificate.crt
+docker cp private.key nginx-proxy:/etc/nginx/certs/private.key
+
 # 8. Run new docker container
 echo "---------- [Deploy Step - 8] : Run New Docker Container"
 docker run -d -p ${PORT}:${PORT} \
     -e VIRTUAL_HOST=www.todolist.o-r.kr,todolist.o-r.kr \
     -e VIRTUAL_PORT=10900 \
     -e HTTPS_METHOD=noredirect \
-    -v /path/to/certificate.crt:./certificate.crt \
-    -v /path/to/ca_bundle.crt:./ca_bundle.crt \
-    -v /path/to/private.key:./private.key \
+    -v /etc/nginx/certs:/etc/nginx/certs
     --restart unless-stopped \
+    --link ${APP_NAME}:app
     --name ${APP_NAME} \
     ${APP_NAME}:${server_version}
 
