@@ -31,7 +31,7 @@ echo "---------- [Deploy Step - 7] : Remove Old Docker Image"
 docker rmi ${APP_NAME_OLD}:${server_version}
 # 8. Run new docker container
 echo "---------- [Deploy Step - 8] : Run New Docker Container"
-docker run -d -p ${PORT}:${PORT} \
+docker run -d -p \
     -e VIRTUAL_HOST=www.todolist.o-r.kr,todolist.o-r.kr \
     -e VIRTUAL_PORT=10900 \
     -e LETSENCRYPT_HOST=www.todolist.o-r.kr,todolist.o-r.kr \
