@@ -106,6 +106,7 @@ body {
         border: 1px solid rgba(83, 138, 240, 0.2);
 
         > span {
+          margin-left: 10px;
           word-break: break-word;
           font-weight: 600;
         }

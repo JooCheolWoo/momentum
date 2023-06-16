@@ -9,9 +9,9 @@ COPY index.html .
 COPY css ./css
 COPY img ./img
 COPY js ./js
+COPY favicon ./favicon
+COPY ads.txt .
+COPY sitemap.xml .
 
 # Nginx 설정 파일 복사
 COPY default.conf /etc/nginx/conf.d/default.conf
-
-# 포트 노출
-EXPOSE 10900
