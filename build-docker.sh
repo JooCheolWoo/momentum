@@ -37,6 +37,7 @@ docker run -d -P \
     --network nginx-proxy \
     --restart unless-stopped \
     --name ${APP_NAME} \
+    --expose 80 \
     ${APP_NAME}:${server_version}
 
 
