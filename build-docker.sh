@@ -2,7 +2,6 @@
 
 APP_NAME="momentum"
 APP_NAME_OLD="${APP_NAME}-old"
-PORT="10900"
 server_version="0.0.1"
 
 source ./yaml.sh
@@ -33,7 +32,6 @@ docker rmi ${APP_NAME_OLD}:${server_version}
 echo "---------- [Deploy Step - 8] : Run New Docker Container"
 docker run -d -P \
     -e VIRTUAL_HOST=www.todolist.o-r.kr,todolist.o-r.kr \
-    -e VIRTUAL_PORT=10900 \
     -e LETSENCRYPT_HOST=www.todolist.o-r.kr,todolist.o-r.kr \
     -e LETSENCRYPT_EMAIL=tkfkdal@naver.com \
     --network nginx-proxy \

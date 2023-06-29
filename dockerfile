@@ -12,6 +12,3 @@ COPY js ./js
 COPY favicon ./favicon
 COPY ads.txt .
 COPY sitemap.xml .
-
-# Nginx 설정 파일 복사
-COPY default.conf /etc/nginx/conf.d/default.conf
